@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<br>
+        <h3 style="font-family: 'Roboto Mono';" class="whiteOnDark">Settings</h3>
+        <input type="text" id="cloakInput" placeholder="Cloak Tab Title..." size=30px/> <button style="width: 90px;" onclick="cloakTab()">Cloak Title</button> 
+        <br>
+ </body>
+ </html>
+ <script>
+function cloakTab() {
+                document.title = document.getElementById("cloakInput").value;
+                document.getElementById("cloakInput").value = "";
+            }
+<script>
