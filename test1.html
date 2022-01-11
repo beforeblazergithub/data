@@ -1,0 +1,102 @@
+<DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mysterious - Login</title>
+    <meta name="description" content="Login">
+    <meta name="author" content="Hunter">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="shortcut icon" href="favicon.png">
+    <style>
+        body {
+            background-color: #303641;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container-login">
+        <div id="title">
+            <i class="material-icons lock"></i>Login
+        </div>
+
+        <form>
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons"></i>
+                </div>
+                <input id="username" placeholder="Username" type="text" required class="validate" autocomplete="off" id="username">
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons"></i>
+                </div>
+                <input id="password" placeholder="Password" type="password" required class="validate" autocomplete="off" id="password">
+            </div>
+            
+
+          
+
+            <button type="Submit" onclick="getInfo()" value="Log In" button id="register-link">Log In</button></form>
+        </form>
+
+
+	
+
+        
+</body>
+</html>
+
+
+
+<script>
+	var objPeople = [
+	{ // Object @ 0 index | Hunter
+		username: "person",
+		password: "8857"
+	},//Hunter
+	{ // Object @ 1 index | Admin
+		username: "Admin",
+		password: "7588"
+	}
+	
+	
+]
+// alert(username + "'s Login Was Successful")
+function getInfo() {
+	var username = document.getElementById('username').value
+	var password = document.getElementById('password').value
+
+	for(var i = 0; i < objPeople.length; i++) {
+		// check is user input matches username and password of a current index of the objPeople array
+		if(username == objPeople[i].username && password == objPeople[i].password) {
+			var myobj = document.getElementById("demo");
+  myobj.remove();
+  
+                  
+			// stop the function if this is found to be true
+			return
+       
+            
+		}
+	}
+	alert("Incorrect Username or Password")
+	alert("If You Don't Have An Account Register One At The Near Bottom Of The Page!\nThank You!")
+   
+
+}
+	    document.addEventListener("contextmenu", (e) => { e.preventDefault(); });
+    document.addEventListener("keydown", (e) => {
+  if (e.ctrlKey || e.keyCode==123) {
+    e.stopPropagation();
+    e.preventDefault();
+  }
+});
+</script>
+
+
+
+
